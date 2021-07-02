@@ -14,9 +14,17 @@ Then User should be able to successfully login
 #Then User should be able to successfully login
 #And Close browser
 
-Scenario: Create an Enrollment Request
+Scenario Outline: Create an Enrollment Request
 Given User clicks on Enrollment Request tab
 And User selects New Enrollment Request option
-When User enters all the mandatory fields 
+When User enters <RequestReceivedChannel> application information
+And User enters Requestor Information details <ResponseType>, <IsCustodialParty>, <MemberType>, <FirstName>, <LastName>
+And User enters Requestor Address details <AddressType>, <Address>, <City>, <State>, <ZIP>
+And User enters Requestor Contact details <MethodOfCommunication>, <PhoneNumType>, <PhoneNum>
+And User selects Request Response Documents <Documents>
+And User assignes request to <personName>
 And Clicks on Save button
 Then New Enrollment Request should be created successfully
+Examples:
+	|RequestReceivedChannel|ResponseType|IsCustodialParty|MemberType|FirstName|LastName|AddressType|Address|City|State|ZIP|MethodOfCommunication|PhoneNumType|PhoneNum|Documents|personName|
+	|Phone				|Mail|Yes|Individual|Pooja|Gouri|Residential|Vidyanagar|Phoenix|Arizona|85123|Phone|Home Phone|(888)888-8888|UIFSA General Testimony,Affidavit Supporting Paternity|Manisha Kodithyala|

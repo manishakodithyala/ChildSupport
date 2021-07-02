@@ -1,3 +1,6 @@
-16:20:58.800 [main] INFO  resources.base - Entered login credentials and clicked on login button
-16:22:45.254 [main] INFO  resources.base - driver initialized successfully
-16:22:48.828 [main] INFO  resources.base - Application opened
+19:53:22.010 [main] INFO  resources.base - Selected Address type as : Residential
+19:53:26.598 [main] INFO  resources.base - Selected State as : Arizona
+19:53:30.447 [main] INFO  resources.base - Selected preferred method of communication as : Phone
+19:53:33.972 [main] INFO  resources.base - Selected phone number type as : Home Phone
+19:53:35.448 [main] INFO  resources.base - Added all specified request response documents
+19:53:38.905 [main] INFO  resources.base - Request Assigned to Manisha Kodithyalasuccessfully

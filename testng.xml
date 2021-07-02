@@ -6,7 +6,6 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Automation.AppTest"/>
       <class name="Automation.HomePage"/>
     </classes>
   </test> <!-- Test -->

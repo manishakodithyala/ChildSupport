@@ -1,0 +1,6 @@
+19:50:23.739 [main] INFO  resources.base - Added all specified request response documents
+19:50:26.997 [main] INFO  resources.base - Request Assigned to Manisha Kodithyalasuccessfully
+19:53:05.312 [main] INFO  resources.base - Succesfully selected request received channel option
+19:53:10.896 [main] INFO  resources.base - Selected Request Response Type as : Mail
+19:53:14.308 [main] INFO  resources.base - Selected Custodial Party as : Yes
+19:53:17.736 [main] INFO  resources.base - Selected Member Party as : Individual
