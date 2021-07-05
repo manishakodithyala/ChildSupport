@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,7 +12,6 @@ import com.sun.tools.sjavac.Log;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import junit.framework.Assert;
 import pageObjects.EnrollmentRequestsPage;
 import pageObjects.HomePage;
 import pageObjects.loginPage;
@@ -115,8 +115,9 @@ public class loginPageSteps extends base {
 	}
 	
 	@Then("^New Enrollment Request should be created successfully$")
-	public void isEnrollmentReqCreated() {
-		
+	public void isEnrollmentReqCreated() throws InterruptedException {
+		EnrollmentRequestsPage er = new EnrollmentRequestsPage(driver);
+		Assert.assertTrue(er.proceedToIntakeBtn().isDisplayed());
 	}
 
 }

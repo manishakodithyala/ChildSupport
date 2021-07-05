@@ -1,0 +1,6 @@
+12:16:05.857 [main] INFO  resources.base - Selected Member Party as : Individual
+12:16:09.790 [main] INFO  resources.base - Selected Address type as : Residential
+12:16:13.352 [main] INFO  resources.base - Selected State as : Arizona
+12:16:16.750 [main] INFO  resources.base - Selected preferred method of communication as : Phone
+12:16:20.002 [main] INFO  resources.base - Selected phone number type as : Home Phone
+12:16:20.566 [main] INFO  resources.base - Added all specified request response documents

@@ -39,6 +39,7 @@ public class EnrollmentRequestsPage {
 	By assignsToBox = By.xpath("//input[@placeholder='Search People...']");
 	By personNameInSearchResults = By.xpath("//input[@placeholder='Search People...']/ancestor::div[1]/following-sibling::div[1]//ul//li//lightning-base-combobox-item");
 	By enrollRequestPageSaveBtn = By.xpath("//button[text()='Save']");
+	By proceedToCaseIntake = By.xpath("//button[text()='Proceed to Case Intake']");
 	
 	public EnrollmentRequestsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -181,13 +182,18 @@ public class EnrollmentRequestsPage {
 		driver.findElement(assignsToBox).sendKeys(personName);
 		Thread.sleep(2000);
 		driver.findElement(personNameInSearchResults).click();
-		log.info("Request Assigned to " + personName + "successfully");
+		log.info("Request Assigned to " + personName + " successfully");
 	}
 	
 	
 	public WebElement enrollRequestSaveBtn() {
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,100)");
 		return driver.findElement(enrollRequestPageSaveBtn);
+	}
+	
+	public WebElement proceedToIntakeBtn() throws InterruptedException {
+		Thread.sleep(2000);
+		return driver.findElement(proceedToCaseIntake);
 	}
 
 }
