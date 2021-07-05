@@ -37,12 +37,20 @@ public class base {
 		return driver;
 	}
 	
-	public String getScreenshotPath(String testCaseName, WebDriver driver) throws IOException {
+	public String getScreenshotPath(String testCaseName) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		String destinationFile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+".png";
 		FileUtils.copyFile(source,new File(destinationFile));
 		return destinationFile;
+	}
+	
+	public void getScreenshot(String testCaseName) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+".png";
+		FileUtils.copyFile(source,new File(destinationFile));
+		
 	}
 
 }

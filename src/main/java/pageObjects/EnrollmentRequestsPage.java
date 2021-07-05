@@ -11,6 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 import resources.base;
 
@@ -40,7 +41,7 @@ public class EnrollmentRequestsPage {
 	By personNameInSearchResults = By.xpath("//input[@placeholder='Search People...']/ancestor::div[1]/following-sibling::div[1]//ul//li//lightning-base-combobox-item");
 	By enrollRequestPageSaveBtn = By.xpath("//button[text()='Save']");
 	By proceedToCaseIntake = By.xpath("//button[text()='Proceed to Case Intake']");
-	
+	By alertPopup = By.cssSelector("div.toastContainer.slds-notify_container.slds-is-relative");
 	public EnrollmentRequestsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
@@ -192,8 +193,8 @@ public class EnrollmentRequestsPage {
 	}
 	
 	public WebElement proceedToIntakeBtn() throws InterruptedException {
+		Assert.assertTrue(driver.findElement(alertPopup).isDisplayed());
 		Thread.sleep(2000);
 		return driver.findElement(proceedToCaseIntake);
 	}
-
 }

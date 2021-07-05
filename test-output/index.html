@@ -2,11 +2,10 @@
 
 <html>
   <head>
-  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -143,8 +142,8 @@
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite parallel=&quot;none&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;cucumberOptions.testRunner&quot;/&gt;
@@ -199,7 +198,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'cucumberOptions.testRunner')
-data.setCell(0, 3, 92678);
+data.setCell(0, 3, 91067);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -237,11 +236,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(Login into Application)</span>
-                <span class="method-start">792 ms</span>
+                <span class="method-start">603 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">93489 ms</span>
+                <span class="method-start">91673 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
